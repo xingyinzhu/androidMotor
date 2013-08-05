@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background2" 
+    android:orientation="vertical" >
+    
+    <Button
+        android:id="@+id/gravity_open"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/scan_button"
+        android:text="@string/gravity_label" />
+
+    <Button
+        android:id="@+id/scan_button"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/scan_label" />
+
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/gravity_open"
+        android:text="@string/exit_label" />
+
+    <Button
+        android:id="@+id/gravity_close"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gravity_open"
+        android:layout_alignParentBottom="true"
+        android:text="@string/gravity_label2" />
+
+    <Button
+        android:id="@+id/switch_button"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/back_button"
+        android:layout_toRightOf="@+id/gravity_close"
+        android:text="@string/switch_label" />
+
+    <Button
+        android:id="@+id/about_button"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/forward_button"
+        android:text="@string/about_label" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:text="@string/main_title"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignLeft="@+id/forward_button"
+        android:layout_alignParentBottom="true"
+        android:text="@string/back_label" />
+
+    <Button
+        android:id="@+id/forward_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_toRightOf="@+id/left_button"
+        android:layout_alignParentTop="true"
+        android:text="@string/forward_label" />
+
+    <Button
+        android:id="@+id/left_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/forward_button"
+        android:text="@string/left_label" />
+
+    <Button
+        android:id="@+id/right_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignBaseline="@+id/left_button"
+        android:layout_alignBottom="@+id/left_button"
+        android:layout_toRightOf="@+id/forward_button"
+        android:text="@string/right_label" />
+
+    <Button
+        android:id="@+id/leftback_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignBottom="@+id/switch_button"
+        android:layout_toLeftOf="@+id/back_button"
+        android:text="@string/leftback_label" />
+
+    <Button
+        android:id="@+id/rightback_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_above="@+id/back_button"
+        android:layout_alignLeft="@+id/right_button"
+        android:text="@string/rightback_label" />
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">YFRobotClient</string>
+    
+    <!-- MainActivity -->
+	<string name="main_title">YFRobot Client for Android</string>	
+	<string name="bt_not_enabled_leaving">蓝牙不启用</string>
+	<string name="not_connected">没有连接到一个设备</string>
+	<string name="title_connecting">连接。。。</string>
+    <string name="title_connected_to">连接到 <xliff:g id="device_name"> </xliff:g></string>
+    <string name="title_not_connected">未连接</string>	
+    <string name="title_disconnected">断开连接</string>
+    <string name="switch_label">关闭</string>	
+ 
+    <!-- Gravity -->
+	<string name="gravity_label">启用重力</string>
+	<string name="gravity_title">重力感应</string>
+	<string name="gravity_label2">关闭重力</string>
+	<string name="gravity_return">返回</string>
+	<string name="gravity_enable">启用重力感应</string>
+	<string name="x_value">X Value</string>
+	<string name="y_value">Y Value</string>
+	<string name="z_value">Z Value</string>
+	
+	
+	
+	<!-- Screen -->
+	<string name="land_label">横屏</string>
+	<string name="port_label">竖屏</string>
+	
+    <!-- Scan -->
+    <string name="scan_label">连接</string>
+    <string name="title_paired_devices">已配对设备</string>
+    <string name="title_other_devices">其他可用的设备</string>
+    <string name="button_scan">扫描查找设备 </string>
+    <string name="none_paired">没有设备已经被配对</string>
+    <string name="none_found">找不到设备 </string>
+    <string name="scanning">扫描设备。。。</string>
+    <string name="select_device">选择一个设备连接</string>
+    <string name="button_cancel">取消</string>
+    
+    <!-- About -->
+    <string name="about_label">关于</string>
+    <string name="about_title">使用与说明</string>
+    <string name="about_text1">蓝牙连接：点击连接；扫描查找设备，点击连接蓝牙设备，等待连接完成； </string>
+    <string name="about_text2">按键控制：点击方向键控制小车运动；</string>
+    <string name="about_text3">重力控制：点击启用重力，控制小车运动，用完点击关闭重力；</string>
+    <string name="about_text4">版本：V1.2</string>
+    <string name="about_text5">联系我们：www.yfrobot.com</string>
+    <string name="about_text6">YFRobot出品</string>
+    <string name="about_return">返回</string>
+    
+    <!-- Direction Control -->
+    <string name="forward_label">前进</string>
+	<string name="back_label">后退</string>
+	<string name="right_label">右转</string>
+	<string name="left_label">左转</string>
+	<string name="stop_label">停止</string>
+	<string name="exit_label">退出</string>
+	<string name="Devices_label">名称和地址</string>
+	
+	<!-- URL -->
+	<string name="URL">论坛：www.yfrobot.com</string>
+	
+	<!-- Disconnect -->
+	<string name="disconnect_label">断开</string>
+	
+	<!-- Options Menu -->
+    <string name="discoverable">Make discoverable</string>
+    <string name="leftback_label">左后转</string>
+    <string name="rightback_label">右后转</string>
+
+
+</resources>
