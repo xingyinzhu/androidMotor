@@ -277,7 +277,6 @@ public class MainActivity extends Activity implements OnClickListener
                 {
                 case MotionEvent.ACTION_DOWN:
                     sendMessage(TURRENTLEFT);
-                    Log.d(TAG, "++ TURRENTLEFT ++");
                     break;
                 case MotionEvent.ACTION_UP:
                 	//sendMessage(STOP);
@@ -297,7 +296,6 @@ public class MainActivity extends Activity implements OnClickListener
                 {
                 case MotionEvent.ACTION_DOWN:
                     sendMessage(TURRENTRIGHT);
-                    Log.d(TAG, "++ TURRENTRIGHT ++");
                     break;
                 case MotionEvent.ACTION_UP:
                 	//sendMessage(STOP);
