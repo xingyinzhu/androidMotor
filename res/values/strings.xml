@@ -69,6 +69,8 @@
     <string name="discoverable">Make discoverable</string>
     <string name="leftback_label">左后转</string>
     <string name="rightback_label">右后转</string>
+    <string name="turrentleft_label">炮塔左转</string>
+    <string name="turrentright_label">炮塔右转</string>
 
 
 </resources>

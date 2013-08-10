@@ -112,4 +112,21 @@
         android:layout_alignLeft="@+id/right_button"
         android:text="@string/rightback_label" />
 
+    <Button
+        android:id="@+id/turrentleft_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_above="@+id/back_button"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_marginRight="21dp"
+        android:text="@string/turrentleft_label" />
+
+    <Button
+        android:id="@+id/turrentright_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignTop="@+id/turrentleft_button"
+        android:layout_toRightOf="@+id/turrentleft_button"
+        android:text="@string/turrentright_label" />
+
 </RelativeLayout>

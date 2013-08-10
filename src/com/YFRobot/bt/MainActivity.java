@@ -65,6 +65,8 @@ public class MainActivity extends Activity implements OnClickListener
     //xzhu add
     private Button leftbackButton;
     private Button rightbackButton;
+    private Button turrentleftButton;
+    private Button turrentrightButton;
     
     //private Button gravityButton;
 	private SensorManager sensorMgr = null;
@@ -86,9 +88,11 @@ public class MainActivity extends Activity implements OnClickListener
     private byte[] LEFT = {(byte) 0xFF, 0x5A, 0x5B, 0x00, 0x02, (byte) 0xFF};
     private byte[] RIGHT = {(byte) 0xFF, 0x5A, 0x5B, 0x00, 0x04, (byte) 0xFF};
     
-    //xzhu
+    //xzhu add
     private byte[] LEFTBACK = {(byte) 0xFF, 0x5A, 0x5B, 0x00, 0x06, (byte) 0xFF};
     private byte[] RIGHTBACK = {(byte) 0xFF, 0x5A, 0x5B, 0x00, 0x07, (byte) 0xFF};
+    private byte[] TURRENTLEFT = {(byte) 0xFF, 0x5A, 0x5B, 0x00, 0x08, (byte) 0xFF};
+    private byte[] TURRENTRIGHT = {(byte) 0xFF, 0x5A, 0x5B, 0x00, 0x09, (byte) 0xFF};
     
     // Name of the connected device  连接的设备的名称
     private String mConnectedDeviceName = null;
@@ -199,7 +203,12 @@ public class MainActivity extends Activity implements OnClickListener
 			}   	  
     	else {
     		//设置控制小车
-            if (mService == null) directionControl();
+            if (mService == null) 
+            {
+            	Log.e(TAG,"++ IN mService EQUAL NULL");
+            	directionControl();
+            	sensorControl();
+            }
         }	
     }   
     
@@ -251,6 +260,53 @@ public class MainActivity extends Activity implements OnClickListener
     	}
     }   
     
+    /**
+     * 传感器控制 （各种传感，目前只有超声波模块）
+     */
+    
+    private void sensorControl(){
+    	Log.d(TAG, "sensorControl()");
+    	
+    	turrentleftButton = (Button)findViewById(R.id.turrentleft_button);
+    	turrentleftButton.setOnTouchListener(new Button.OnTouchListener() 
+    	{
+    		@Override
+            public boolean onTouch(View v, MotionEvent event) {
+                int action = event.getAction();
+                switch(action)
+                {
+                case MotionEvent.ACTION_DOWN:
+                    sendMessage(TURRENTLEFT);
+                    Log.d(TAG, "++ TURRENTLEFT ++");
+                    break;
+                case MotionEvent.ACTION_UP:
+                	//sendMessage(STOP);
+                    break;
+                }
+                return false;
+            }  		
+    	});
+    	
+    	turrentrightButton = (Button)findViewById(R.id.turrentright_button);
+    	turrentrightButton.setOnTouchListener(new Button.OnTouchListener() 
+    	{
+    		@Override
+            public boolean onTouch(View v, MotionEvent event) {
+                int action = event.getAction();
+                switch(action)
+                {
+                case MotionEvent.ACTION_DOWN:
+                    sendMessage(TURRENTRIGHT);
+                    Log.d(TAG, "++ TURRENTRIGHT ++");
+                    break;
+                case MotionEvent.ACTION_UP:
+                	//sendMessage(STOP);
+                    break;
+                }
+                return false;
+            }  		
+    	});
+    }
     
     /** 
      * 小车方向控制（按钮控制）
@@ -554,6 +610,7 @@ public class MainActivity extends Activity implements OnClickListener
             // When the request to enable Bluetooth returns
             if (resultCode == Activity.RESULT_OK) {
             	directionControl();
+            	sensorControl();
             } 
             else {
             	// User did not enable Bluetooth or an error occurred
